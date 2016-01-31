@@ -3,6 +3,10 @@ A Python script that uses basic methods to crack passwords.
 
 Based off a script created by [Science Buddies](http://www.sciencebuddies.org/Files/5549/17/crack2.py).
 
+This script was created because I have a sicence fair project to do. I'm guessing you have one too.
+
+You could call me a script kiddie. I may suck at Python but I'm sure everyone except Guido did so at one point.
+
 This script contains cleaner, improved code and commenting.
 ___
 
@@ -29,5 +33,7 @@ This builds upon the the first method. It combines two common passwords together
   
 The script will guess the password only using numbers. It will guess up combinations up to 8 characters.
 
-  __4. 
+  __4. Combination of Characters
+  
+Elucidate will combine all ket
 
