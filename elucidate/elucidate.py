@@ -8,6 +8,8 @@
 # See README.md for more information.
 # Availiable on Github: https://github.com/DonutDeflector/elucidate
 
+# Go to line 368 to set the passwords you want to guess.
+
 ######################################################################################
 
 # extra functions we need for this script
@@ -113,10 +115,7 @@ def search_method_1(num_digits):
             print ("Success! Password "+str(which_password)+" is " + ourguess)
             still_searching = False   # we can stop now - we found it!
             result = True
-        #else:
-            #print ("Darn. " + ourguess + " is NOT the password.")
-        a=a+1
-
+    a=a+1
     seconds = time.time()-starttime
     report_search_time(tests, seconds)
     return result
@@ -206,7 +205,7 @@ def search_method_3(file_name):
     global totalguesses
     result = False
     
-    # Start by reading the list of words into a Python list
+    # you know what I like more than my lamborghini? knowledge
     f = open(file_name)
     words = f.readlines()
     f.close
@@ -233,8 +232,6 @@ def search_method_3(file_name):
             print ("Success! Password "+str(which_password)+" is " + ourguess_pass)
             still_searching = False   # we can stop now - we found it!
             result = True
-        #else:
-            #print ("Darn. " + ourguess_pass + " is NOT the password.")
         tests = tests + 1
         totalguesses = totalguesses + 1
         # Now let's try it with the first letter capitalized
@@ -245,8 +242,6 @@ def search_method_3(file_name):
                 print ("Success! Password "+str(which_password)+" is " + ourguess_pass)
                 still_searching = False   # we can stop now - we found it!
                 result = True
-            #else:
-                #print ("Darn. " + ourguess_pass + " is NOT the password.")
             tests = tests + 1
             totalguesses = totalguesses + 1
 
@@ -363,7 +358,7 @@ def main(argv=None):
     global password4, password5, password6, totalguesses
     global which_password
 
-    # This is a place for you to set a password of your own
+    # set the passwords you want to guess here
     password0="albert"
     password1="mustang"
     password2="123456"
@@ -374,7 +369,7 @@ def main(argv=None):
 
     # start searching
     which_password = 1
-    which_password = int(input("Password to Guess: (0-6) "))
+    which_password = int(input("Password to Decrypt: (0-6) "))
     overallstart = time.time()
     foundit = False
     print("Trying to guess password "+str(which_password))
@@ -411,14 +406,9 @@ def main(argv=None):
     # Still looking? Guess up to 8 character combinations
     if not foundit:
         foundit = search_method_2(8)
-
     seconds = time.time()-overallstart
-    # When testing this project, some users reported that the next lines of code reported
-    # an error when Python tried to divide by zero. On those machines, the clock seems
-    # to think that the seconds calculation just above gave us "zero" seconds which doesn't
-    # make any sense. To avoid the crash though, we'll test for that case and avoid the
-    # problem.
 
+    # print information about the guessing process (total seconds, total guesses, and guesses per second)
     print ("")
     print ("Total Seconds: "+make_human_readable(seconds)+"")
     print ("Total Guesses: "+make_human_readable(totalguesses)+"")
