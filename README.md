@@ -18,6 +18,6 @@ ___
 Elucidate uses 4 methods to crack passwords:
   __1. Dictionary of Common Passwords__
   
-      Elucidate will use the "password.txt" file to guess the password. It contains safe-for-work (and school) from a book called       *Perfect Passwords: Selection, Protection, Authenication* by Mark Burnett (__ISBN-10: 1597490415__). 
+Elucidate will use the "password.txt" file to guess the password. It contains safe-for-work (and school) from a book called *Perfect Passwords: Selection, Protection, Authenication* by Mark Burnett (__ISBN-10: 1597490415__). 
 
   __2. Combination of Dictionary of Common Passwords__
