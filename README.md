@@ -1,7 +1,7 @@
 # Elucidate
 A Python script that uses basic methods to crack passwords.
-Based off a script created by [Science Buddies](http://www.sciencebuddies.org/Files/5549/17/crack2.py).
-This script contains cleaner code, improved commenting, and better information printed to the terminal.
+    Based off a script created by [Science Buddies](http://www.sciencebuddies.org/Files/5549/17/crack2.py).
+    This script contains cleaner code, improved commenting, and better information printed to the terminal.
 ___
 
 ### Table of Contents -
