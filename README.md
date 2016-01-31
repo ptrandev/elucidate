@@ -16,8 +16,18 @@ ___
 
 ### 1. Methods of Cracking Passwords
 Elucidate uses 4 methods to crack passwords:
+
   __1. Dictionary of Common Passwords__
   
-Elucidate will use the "password.txt" file to guess the password. It contains safe-for-work (and school) from a book called *Perfect Passwords: Selection, Protection, Authenication* by Mark Burnett (__ISBN-10: 1597490415__). 
+Elucidate will use the "password.txt" file to guess the password. It contains only safe-for-work (and school) common passwords from a book called *Perfect Passwords: Selection, Protection, Authenication* by Mark Burnett (__ISBN 978-1597490412__). 
 
-  __2. Combination of Dictionary of Common Passwords__
+  __2. Dictionary of Common Passwords (Plus Plus)__
+
+This builds upon the the first method. It combines two common passwords together, does the same with punctuation seperating the two, and capitalizes the first letters of each word.
+
+  __3. Numbers Only__
+  
+The script will guess the password only using numbers. It will guess up combinations up to 8 characters.
+
+  __4. 
+
