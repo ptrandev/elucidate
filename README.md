@@ -29,9 +29,15 @@ This builds upon the the first method. It combines two common passwords together
 
   __3. Numbers Only__
   
-The script will guess the password only using numbers. It will guess up combinations up to 8 characters.
+The script will guess the password only using numbers. It will first guess 1 number, then 2 number combinations, then 3 number combinations, etc. It will guess up combinations up to 8 characters.
 
-  __4. Combination of Characters
+  __4. Combination of Characters__
   
-Elucidate will combine all ket
+Elucidate will combine all characters and punctiation sequentially. It will first guess 1 character, then 2 character combinations , then 3 character combinations, etc. It will guess combinations up to 8 characters.
 
+___
+
+### Useage
+
+1. Download the .zip and unzip it to the directory of your choice.
+2. A file 
