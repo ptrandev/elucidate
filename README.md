@@ -3,7 +3,7 @@ A Python script that uses basic methods to crack passwords.
 
 Based off a script created by [Science Buddies](http://www.sciencebuddies.org/Files/5549/17/crack2.py).
 
-This script contains cleaner code, improved commenting, and better information printed to the terminal.
+This script contains cleaner, improved code and commenting.
 ___
 
 ### Table of Contents -
@@ -17,5 +17,5 @@ ___
 ### 1. Methods of Cracking Passwords
 Elucidate uses 4 methods to crack passwords:
   1. Dictionary of Common Passwords
-    Elucidate will use the "password.txt" file to guess the password. It contains safe-for-work (and school) 
+    Elucidate will use the "password.txt" file to guess the password. It contains safe-for-work (and school) from a book called      *Perfect Passwords: Selection, Protection, Authenication* by Mark Burnett
   2. Combination of Dictionary of Common Passwords
