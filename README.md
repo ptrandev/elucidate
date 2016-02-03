@@ -42,7 +42,7 @@ ___
 #### Package Requirements:
 1. Python 2/3
 
-#### Obtaining and Running:
+#### Obtaining and Executing:
 1. Open the terminal and type:
 
     <strong>$ git clone https://github.com/DonutDeflector/elucidate.git</strong>
@@ -51,11 +51,13 @@ ___
 
     <strong>$ cd elucidate/elucidate/</strong>
 
-(NOTE: elucidate/ contains a README.md file that contains information on useage of the script.)
-
 3. Run the script:
 
     <strong>$ python elucidate.py</strong>
+
+## Operation:
+1.
+
 
 ___
 
