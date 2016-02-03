@@ -50,6 +50,7 @@ ___
 2. Naviate to the directory:
 
     <strong>$ cd elucidate/elucidate/</strong>
+
 (NOTE: elucidate/ contains a README.md file that contains information on useage of the script.)
 
 3. Run the script:
