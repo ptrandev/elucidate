@@ -37,7 +37,15 @@ Elucidate will combine all characters and punctiation sequentially. It will firs
 
 ___
 
-### Useage
+### Useage (For Linux)
 
-1. Download the .zip and unzip it to the directory of your choice.
-2. A file 
+Package Requirements:
+1. Python 2/3
+
+Instructions:
+1. Open the terminal and type: 
+    git clone https://github.com/DonutDeflector/elucidate.git
+2. Naviate to the directory:
+    cd elucidate/elucidate/
+3. Run the script:
+    python elucidate.py
