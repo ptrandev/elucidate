@@ -51,12 +51,16 @@ ___
 
     <strong>$ cd elucidate/elucidate/</strong>
 
-3. Run the script:
+3. Execute the script:
 
     <strong>$ python elucidate.py</strong>
 
-## Operation:
-1.
+#### Operation:
+1. After executing the script, it will prompt you: 
+
+    <strong>- Elucidate: Python Password Hasher -</strong>
+    <strong>Password to Decrypt: (0-6) </strong>
+
 
 
 ___
