@@ -8,7 +8,7 @@ This script contains cleaner, improved code and commenting.
 You could call me a script kiddie. I may suck at Python but I'm sure everyone except Guido did so at one point.
 ___
 
-### Table of Contents -
+## Table of Contents -
 1. Methods of Cracking Passwords
 2. Useage
 3. Modification
@@ -16,7 +16,7 @@ ___
 
 ___
 
-### 1. Methods of Cracking Passwords
+## 1. Methods of Cracking Passwords
 Elucidate uses 4 methods to crack passwords:
 
   __1. Dictionary of Common Passwords__
@@ -37,12 +37,12 @@ Elucidate will combine all characters and punctiation sequentially. It will firs
 
 ___
 
-### Useage (For Linux)
+## Useage (For Linux)
 
-##### Package Requirements:
+#### Package Requirements:
 1. Python 2/3
 
-##### Instructions:
+#### Instructions:
 1. Open the terminal and type:
 
     <strong>$ git clone https://github.com/DonutDeflector/elucidate.git</strong>
