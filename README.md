@@ -39,10 +39,10 @@ ___
 
 ### Useage (For Linux)
 
-Package Requirements:
+#### Package Requirements:
 1. Python 2/3
 
-Instructions:
+#### Instructions:
 1. Open the terminal and type: 
     git clone https://github.com/DonutDeflector/elucidate.git
 
