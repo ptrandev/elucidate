@@ -45,13 +45,13 @@ ___
 ##### Instructions:
 1. Open the terminal and type:
 
-    <em>$ git clone https://github.com/DonutDeflector/elucidate.git</em>
+    <strong>$ git clone https://github.com/DonutDeflector/elucidate.git</strong>
 
 2. Naviate to the directory:
 
-    <em>$ cd elucidate/elucidate/</em>
+    <strong>$ cd elucidate/elucidate/</strong>
 
 3. Run the script:
 
-    <em>$ python elucidate.py</em>
+    <strong>$ python elucidate.py</strong>
 
