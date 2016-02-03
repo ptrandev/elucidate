@@ -43,11 +43,14 @@ ___
 1. Python 2/3
 
 ##### Instructions:
-1. Open the terminal and type: 
+1. Open the terminal and type:
+
     $ git clone https://github.com/DonutDeflector/elucidate.git
 
 2. Naviate to the directory:
+
     $ cd elucidate/elucidate/
 
 3. Run the script:
+
     $ python elucidate.py
