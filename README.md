@@ -59,6 +59,7 @@ ___
 1. After executing the script, it will prompt you: 
 
     <strong>- Elucidate: Python Password Hasher -</strong>
+    
     <strong>Password to Decrypt: (0-6) </strong>
 
 
