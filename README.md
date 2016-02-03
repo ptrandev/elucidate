@@ -44,6 +44,7 @@ ___
 
 ##### Instructions:
 1. Open the terminal and type: 
+
      git clone https://github.com/DonutDeflector/elucidate.git
 
 2. Naviate to the directory:
