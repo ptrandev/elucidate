@@ -11,8 +11,7 @@ ___
 ## Table of Contents -
 1. Methods of Cracking Passwords
 2. Useage
-3. Modification
-4. License
+3. Modification and Redistribution
 
 ___
 
@@ -38,12 +37,12 @@ Elucidate will combine all characters and punctiation sequentially. It will firs
 
 ___
 
-## Useage (For Linux)
+## 2. Useage (For Linux)
 
 #### Package Requirements:
 1. Python 2/3
 
-#### Instructions:
+#### Obtaining and Running:
 1. Open the terminal and type:
 
     <strong>$ git clone https://github.com/DonutDeflector/elucidate.git</strong>
@@ -51,8 +50,15 @@ ___
 2. Naviate to the directory:
 
     <strong>$ cd elucidate/elucidate/</strong>
+(NOTE: elucidate/ contains a README.md file that contains information on useage of the script.)
 
 3. Run the script:
 
     <strong>$ python elucidate.py</strong>
+
+___
+
+## 3. Modification and Redistribution
+
+
 
