@@ -17,6 +17,7 @@ ___
 ___
 
 ## 1. Methods of Cracking Passwords
+
 Elucidate uses 4 methods to crack passwords:
 
 #### 1. Dictionary of Common Passwords
