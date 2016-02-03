@@ -45,14 +45,13 @@ ___
 ##### Instructions:
 1. Open the terminal and type:
 
-    $ git clone https://github.com/DonutDeflector/elucidate.git
+    <em>$ git clone https://github.com/DonutDeflector/elucidate.git</em>
 
 2. Naviate to the directory:
 
-    $ cd elucidate/elucidate/
+    <em>$ cd elucidate/elucidate/</em>
 
 3. Run the script:
 
-    $ python elucidate.py
+    <em>$ python elucidate.py</em>
 
-    $ bundle exec jekyll -w serve
