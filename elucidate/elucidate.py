@@ -102,12 +102,12 @@ def report_search_time(tests, seconds):
 # search methods #
 ##################
 
-# search method 1 will try using digits as the password.
+# METHOD 1 -
+# Guess using numbers. (up to 7 digits)
 def search_method_1(num_digits):
     global totalguesses
     result = False
     a=0
-    #num_digits = 3    # How many digits to try. 1 = 0 to 9, 2 = 00 to 99, etc.
     starttime = time.time()
     tests = 0
     still_searching = True
@@ -125,9 +125,8 @@ def search_method_1(num_digits):
     report_search_time(tests, seconds)
     return result
 
-# search method 2 is a simulation of a letter-style combination lock. Each'wheel' has the
-# letters A-Z, a-z and 0-9 on it as well as a blank. The idea is that we have a number of
-# wheels for a user name and password and we try each possible combination.
+# METHOD 2 -
+# Guess using combination of characters. Includes punctuation. (up to 25 characters)
 def search_method_2(num_pass_wheels):
     global totalguesses
     result = False
@@ -198,12 +197,8 @@ def Cap (s):
     return s
 
 
-# search method 3 uses a list of dictionary words. In this case, we have a list
-# of the 500 most commonly used passwords in 2005 as collected by Mark Burnett
-# for his book "Perfect Passwords" (ISBN 978-1597490412). Because the list comes
-# from so many people around the world, we had to remove some of the passwords.
-# People like to use passwords that they think will shock other people, so
-# sometimes they're not fit for polite company.
+# METHOD 3 -
+# Use dictionary of common passwords. (uses passwords.txt)
 def search_method_3(file_name):
     global totalguesses
     result = False
@@ -256,8 +251,8 @@ def search_method_3(file_name):
     report_search_time(tests, seconds)
     return result
             
-## Search method 4 is similar to 3 in that it uses the dictionary, but it tries two
-## two words separated by a punctuation character
+# METHOD 4 -
+# Uses combination of common passwords. Includes punctuation and capitalization.
 def search_method_4(file_name):
     global totalguesses
     result = False
@@ -359,43 +354,47 @@ def main(argv=None):
     password5="football"
     password6="2000"
 
-    # start searching
+###################
+# guess passwords #
+###################
+
+    # start guessing
     which_password = 1
-    which_password = int(input("Password to Decrypt: (0-6) "))
+    which_password = int(input("Password to Guess: (0-6) "))
     overallstart = time.time()
     foundit = False
     print("Trying to guess password "+str(which_password))
-    # Look through our list of common passwords first
+    #  1st - guess common passwords
     if not foundit:
         foundit = search_method_3("passwords.txt")
-    # Still looking? Let's combine the common passwords 2 at a time
+    #  2nd - guess combination of common passwords
     if not foundit:
         foundit = search_method_4("passwords.txt")
-    # Still looking? See if it's a single digit
+    #  3rd - guess 1  digit numbers
     if not foundit:
         foundit = search_method_1(1)
-    # Still looking? See if it's a 2 digit number
+    #  4th - guess 2 digit numbers
     if not foundit:
         foundit = search_method_1(2)
-    # Still looking? See if it's a 3 digit number
+    #  5th - guess 3 digit numbers
     if not foundit:
         foundit = search_method_1(3)
-    # Still looking? See if it's a 4 digit number
+    #  6th - guess 4 digit numbers
     if not foundit:
         foundit = search_method_1(4)
-    # Still looking? See if it's a 5 digit number
+    #  7th - guess 5 digit numbers
     if not foundit:
         foundit = search_method_1(5) 
-    # Still looking? See if it's a 6 digit number
+    #  8th - guess 6 digit numbers
     if not foundit:
         foundit = search_method_1(6)
-    # Still looking? See if it's a 7 digit number
+    #  9th - guess 7 digit numbers
     if not foundit:
         foundit = search_method_1(7)
-    # Still looking? See if it's a 8 digit number
+    # 10th - guess 8 digit numbers
     if not foundit:
         foundit = search_method_1(8)
-    # Still looking? Guess up to 8 character combinations
+    # 11th - guess 8 character combinations
     if not foundit:
         foundit = search_method_2(8)
     seconds = time.time()-overallstart
