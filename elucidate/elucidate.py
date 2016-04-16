@@ -2,8 +2,9 @@
 
 # Elucidate: A Python script that uses basic methods to crack passwords.
 # Based off of a script created by Science Buddies. (http://www.sciencebuddies.org/Files/5549/17/crack2.py)
+
 # This script contains cleaner, improved code and commenting.
-# You could call me a script kiddie. I may suck at Python but I'm sure everyone except Guido did so at one point.
+# You could call me a script kiddie. I may be terrible  at Python but I'm sure everyone except Guido did so at one point.
 
 # See README.md for more information.
 # Availiable on Github: https://github.com/DonutDeflector/elucidate
@@ -12,7 +13,7 @@
 
 ######################################################################################
 
-# extra functions we need for this script
+# extra functions
 import sys, time, hashlib
 from array import *
 
@@ -20,7 +21,7 @@ from array import *
 # global variables # 
 ####################
 
-# the password we'll try to crack from 0 - 6
+# password to crack from 0-6
 which_password = 0
 
 # the passwords we are trying to crack; these variables will get written in
@@ -97,6 +98,10 @@ def report_search_time(tests, seconds):
         print ("The search took "+make_human_readable(seconds)+" seconds for "+make_human_readable(tests)+" tests.")
     return
 
+##################
+# search methods #
+##################
+
 # search method 1 will try using digits as the password.
 def search_method_1(num_digits):
     global totalguesses
@@ -112,7 +117,7 @@ def search_method_1(num_digits):
         tests = tests + 1
         totalguesses = totalguesses + 1
         if (check_userpass(which_password, ourguess)):
-            print ("Success! Password "+str(which_password)+" is " + ourguess)
+            print ("Password Cracked:" +str(which_password)+" is " + ourguess)
             still_searching = False   # we can stop now - we found it!
             result = True
     a=a+1
@@ -148,8 +153,6 @@ def search_method_2(num_pass_wheels):
             print ("Success! Password  "+str(which_password)+" is " + ourguess_pass)
             still_searching = False   # we can stop now - we found it!
             result = True
-        #else:
-            #print ("Darn. " + ourguess + " is NOT the password.")
         tests = tests + 1
         totalguesses = totalguesses + 1
 # spin the rightmost wheel and if it changes, spin the next one over and so on
@@ -297,44 +300,33 @@ def search_method_4(file_name):
             print ("Success! Password "+str(which_password)+" is " + ourguess_pass)
             still_searching = False   # we can stop now - we found it!
             result = True
-        #else:
-            #print ("Darn. " + ourguess_pass + " is NOT the password.")
         tests = tests + 1
         totalguesses = totalguesses + 1
         # Now let's try it with the first letter of the first word capitalized
         if still_searching:
             ourguess_pass = Cap(words[word1count]) + punctuation[punc_count] + words[word2count]
-            #print("Guessing: "+ourguess_pass)
             if (check_userpass(which_password, ourguess_pass)):
                 print ("Success! Passwword "+str(which_password)+" is " + ourguess_pass)
                 still_searching = False   # we can stop now - we found it!
                 result = True
-            #else:
-                #print ("Darn. " + ourguess_pass + " is NOT the password.")
             tests = tests + 1
             totalguesses = totalguesses + 1
         # Now let's try it with the first letter of the second word capitalized
         if still_searching:
             ourguess_pass = words[word1count] + punctuation[punc_count] + Cap(words[word2count])
-            #print("Guessing: "+ourguess_pass)
             if (check_userpass(which_password, ourguess_pass)):
                 print ("Success! Password "+str(which_password)+" is " + ourguess_pass)
                 still_searching = False   # we can stop now - we found it!
                 result = True
-            #else:
-                #print ("Darn. " + ourguess_pass + " is NOT the password.")
             tests = tests + 1
             totalguesses = totalguesses + 1
         # Now let's try it with the both words capitalized
         if still_searching:
             ourguess_pass = Cap(words[word1count]) + punctuation[punc_count] + Cap(words[word2count])
-            #print("Guessing: "+ourguess_pass)
             if (check_userpass(which_password, ourguess_pass)):
                 print ("Success! Password "+str(which_password)+" is " + ourguess_pass)
                 still_searching = False   # we can stop now - we found it!
-                result = True
-            #else:
-                #print ("Darn. " + ourguess_pass + " is NOT the password.")
+                result = True_
             tests = tests + 1
             totalguesses = totalguesses + 1
 
@@ -414,6 +406,6 @@ def main(argv=None):
     print ("Total Guesses: "+make_human_readable(totalguesses)+"")
     print ("Guesses/Second: "+make_human_readable(totalguesses/seconds)+"")
 
-print ("- Elucidate: Python Password Hasher -")
+print ("- Elucidate: Python Password Cracker -")
 if __name__ == "__main__":
     sys.exit(main(sys.argv[1:]))
