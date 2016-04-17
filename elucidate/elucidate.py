@@ -4,7 +4,7 @@
 # Based off of a script created by Science Buddies. (http://www.sciencebuddies.org/Files/5549/17/crack2.py)
 
 # This script contains cleaner, improved code and commenting.
-# You could call me a script kiddie. I may be terrible  at Python but I'm sure everyone except Guido did so at one point.
+# You could call me a script kiddie. I may be terrible at Python but I'm sure everyone except Guido did so at one point.
 
 # See README.md for more information.
 # Availiable on Github: https://github.com/DonutDeflector/elucidate
@@ -21,10 +21,10 @@ from array import *
 # global variables # 
 ####################
 
-# password to crack from 0-6
+# password to crack from 0-9
 which_password = 0
 
-# the passwords we are trying to crack; these variables will get written in
+# passwords we are trying to crack; will get written in
 password0 = ""
 password1 = ""
 password2 = ""
@@ -32,6 +32,9 @@ password3 = ""
 password4 = ""
 password5 = ""
 password6 = ""
+password7 = ""
+password8 = ""
+password9 = ""
 
 # total number of guesses we had to make to find it
 totalguesses = 0
@@ -56,7 +59,8 @@ def leading_zeroes(n, zeroes):
 # check_userpass
 def check_userpass(which_password, password):
     global password0, password1, password2, password3
-    global password4, password5, password6
+    global password4, password5, password6, password7
+    global password8, password9
     
     result = False
 
@@ -87,15 +91,27 @@ def check_userpass(which_password, password):
     if (6 == which_password):
         if password == password6:
             result = True
+
+    if (7 == which_password):
+        if password == password7:
+            result = True
+
+    if (8 == which_password):
+        if password == password8:
+            result = True
+
+    if (9 == which_password):
+        if password == password9:
+            result = True
             
     return result
 
-# This displays the results of a search including tests per second when possible
+# displays guess results for each method once it's complete
 def report_search_time(tests, seconds):
     if (seconds > 0.000001):
-        print ("The search took "+make_human_readable(seconds)+" seconds for "+make_human_readable(tests)+" tests or "+make_human_readable(tests/seconds)+" tests per second.")
+        print ("Seconds: "+make_human_readable(seconds)+" | Tests: "+make_human_readable(tests)+" | Tests/Seconds: "+make_human_readable(tests/seconds)+"")
     else:
-        print ("The search took "+make_human_readable(seconds)+" seconds for "+make_human_readable(tests)+" tests.")
+        print ("Seconds: "+make_human_readable(seconds)+" | Tests: "+make_human_readable(tests)+"")
     return
 
 ##################
@@ -117,10 +133,11 @@ def search_method_1(num_digits):
         tests = tests + 1
         totalguesses = totalguesses + 1
         if (check_userpass(which_password, ourguess)):
-            print ("Password Cracked:" +str(which_password)+" is " + ourguess)
+            print ("Success! Password "+str(which_password)+" is " + ourguess)
             still_searching = False   # we can stop now - we found it!
             result = True
-    a=a+1
+        a=a+1
+
     seconds = time.time()-starttime
     report_search_time(tests, seconds)
     return result
@@ -134,20 +151,19 @@ def search_method_2(num_pass_wheels):
     tests = 0
     still_searching = True
     print("Using method 2 and searching with "+str(num_pass_wheels)+" password wheels.")
-    wheel = " ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789~!@#$%^&*()_-+={}[]:<>,./"
+    wheel = " ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
     # we only allow up to 8 wheels for each password for now
-    if (num_pass_wheels > 8):
+    if (num_pass_wheels > 25):
         print("Unable to handle the request. No more than 8 characters for a password")
         still_searching = False
     # set all of the wheels to the first position
-    pass_wheel_array=array('i',[1,0,0,0,0,0,0,0,0])
+    pass_wheel_array=array('i',[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0])
         
     while still_searching:
         ourguess_pass = ""
         for i in range(0,num_pass_wheels):  # once for each wheel
             if pass_wheel_array[i] > 0:
                 ourguess_pass = wheel[pass_wheel_array[i]] + ourguess_pass
-        #print ("trying ["+ourguess_pass+"]")
         if (check_userpass(which_password, ourguess_pass)):
             print ("Success! Password  "+str(which_password)+" is " + ourguess_pass)
             still_searching = False   # we can stop now - we found it!
@@ -198,12 +214,12 @@ def Cap (s):
 
 
 # METHOD 3 -
-# Use dictionary of common passwords. (uses passwords.txt)
+# Use dictionary of common passwords. Includes capitalization. (uses passwords.txt)
 def search_method_3(file_name):
     global totalguesses
     result = False
     
-    # you know what I like more than my lamborghini? knowledge
+    # Start by reading the list of words into a Python list
     f = open(file_name)
     words = f.readlines()
     f.close
@@ -224,7 +240,6 @@ def search_method_3(file_name):
 
     while still_searching:
         ourguess_pass = words[word1count]
-        #print("Guessing: "+ourguess_pass)
         # Try it the way it is in the word list
         if (check_userpass(which_password, ourguess_pass)):
             print ("Success! Password "+str(which_password)+" is " + ourguess_pass)
@@ -289,7 +304,6 @@ def search_method_4(file_name):
             ourguess_pass = words[word1count] + words[word2count]
         else:
             ourguess_pass = words[word1count] + punctuation[punc_count] + words[word2count]
-        #print("Guessing: "+ourguess_pass)
         # Try it the way they are in the word list
         if (check_userpass(which_password, ourguess_pass)):
             print ("Success! Password "+str(which_password)+" is " + ourguess_pass)
@@ -321,7 +335,7 @@ def search_method_4(file_name):
             if (check_userpass(which_password, ourguess_pass)):
                 print ("Success! Password "+str(which_password)+" is " + ourguess_pass)
                 still_searching = False   # we can stop now - we found it!
-                result = True_
+                result = True
             tests = tests + 1
             totalguesses = totalguesses + 1
 
@@ -339,20 +353,26 @@ def search_method_4(file_name):
     report_search_time(tests, seconds)
     return result
 
+######################
+# password variables #
+######################
 
 def main(argv=None):
     global password0, password1, password2, password3
-    global password4, password5, password6, totalguesses
-    global which_password
+    global password4, password5, password6, password7    
+    global password8, password9, totalguesses, which_password
 
     # set the passwords you want to guess here
-    password0="albert"
-    password1="mustang"
+    password0="1"
+    password1="aaa"
     password2="123456"
     password3="summer"
     password4="password"
     password5="football"
-    password6="2000"
+    password6="1"
+    password7="mistress"
+    password8="maxwell"
+    password9="1"
 
 ###################
 # guess passwords #
@@ -360,10 +380,10 @@ def main(argv=None):
 
     # start guessing
     which_password = 1
-    which_password = int(input("Password to Guess: (0-6) "))
+    which_password = int(input("Password to Guess (0-9): "))
     overallstart = time.time()
     foundit = False
-    print("Trying to guess password "+str(which_password))
+    print("Guessing: Password "+str(which_password))
     #  1st - guess common passwords
     if not foundit:
         foundit = search_method_3("passwords.txt")
@@ -391,20 +411,23 @@ def main(argv=None):
     #  9th - guess 7 digit numbers
     if not foundit:
         foundit = search_method_1(7)
-    # 10th - guess 8 digit numbers
+    # 10th - guess up to 25 character combinations
     if not foundit:
-        foundit = search_method_1(8)
-    # 11th - guess 8 character combinations
-    if not foundit:
-        foundit = search_method_2(8)
+        foundit = search_method_2(25)
     seconds = time.time()-overallstart
+
+#################
+# result output #
+#################
 
     # print information about the guessing process (total seconds, total guesses, and guesses per second)
     print ("")
-    print ("Total Seconds: "+make_human_readable(seconds)+"")
-    print ("Total Guesses: "+make_human_readable(totalguesses)+"")
-    print ("Guesses/Second: "+make_human_readable(totalguesses/seconds)+"")
+    print ("Total Seconds: "+make_human_readable(seconds)+" seconds")
+    print ("Total Guesses: "+make_human_readable(totalguesses)+" guesses")
+    print ("Guesses/Second: "+make_human_readable(totalguesses/seconds)+" guesses/second")
 
 print ("- Elucidate: Python Password Cracker -")
 if __name__ == "__main__":
     sys.exit(main(sys.argv[1:]))
+
+
