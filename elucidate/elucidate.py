@@ -3,13 +3,12 @@
 # Elucidate: A Python script that uses basic methods to crack passwords.
 # Based off of a script created by Science Buddies. (http://www.sciencebuddies.org/Files/5549/17/crack2.py)
 
-# This script contains cleaner, improved code and commenting.
-# You could call me a script kiddie. I may be terrible at Python but I'm sure everyone except Guido did so at one point.
+# This script contains cleaner, improved code and commenting as well as additional functionality.
 
 # See README.md for more information.
 # Availiable on Github: https://github.com/DonutDeflector/elucidate
 
-# Go to line 368 to set the passwords you want to guess.
+# Go to line 368 to set the passwords you want to crack.
 
 ######################################################################################
 
@@ -150,7 +149,7 @@ def search_method_2(num_pass_wheels):
     starttime = time.time()
     tests = 0
     still_searching = True
-    print("Using method 2 and searching with "+str(num_pass_wheels)+" password wheels.")
+    print("Using method 2 and searching with "+str(num_pass_wheels)+" characters.")
     wheel = " ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
     # we only allow up to 8 wheels for each password for now
     if (num_pass_wheels > 25):
@@ -363,13 +362,13 @@ def main(argv=None):
     global password8, password9, totalguesses, which_password
 
     # set the passwords you want to guess here
-    password0="1"
+    password0="6"
     password1="aaa"
     password2="123456"
     password3="summer"
     password4="password"
     password5="football"
-    password6="1"
+    password6="juvinile giants move"
     password7="mistress"
     password8="maxwell"
     password9="1"
