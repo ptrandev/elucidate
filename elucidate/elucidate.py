@@ -12,7 +12,7 @@
 
 ######################################################################################
 
-# extra functions
+# extra functions needed
 import sys, time, hashlib
 from array import *
 
@@ -38,13 +38,12 @@ password9 = ""
 # total number of guesses to crack the password
 totalguesses = 0
 
-
-#--------------- extra helper functions -------------------
-# These will be used by our search routines later on. We'll get these defined and out
-# of the way. The actual search program is called "main" and will be the last one
-# defined. Once it's defined, the last statement in the file runs it.
-#
-#
+##########################
+# extra helper functions #
+##########################
+# These will be needed later by the search methods.
+# We'll get these defined and out of the way. The actual search program is called "main" 
+# and will be the last one defined. Once it's defined, the last statement in the file runs it.
 
 # Takes a number from 0 on up and the number of digits we want it to have. It uses that
 # number of digits to make a string like "0000" if we wanted 4 or "00000" if we wanted
@@ -304,24 +303,26 @@ def search_method_4(file_name):
     punctuation="~!@#$%^&*()_-+={}[]:<>,./X"  # X is a special case where we omit
                                               # the punctuation to run the words together
 
+    # inform user about the amount of punctuation characters and passwords in the file
     number_of_puncs = len(punctuation)
     print("")
     print("Method 4 -- "+str(number_of_puncs)+" punctuation characters | "+str(number_of_words)+" passwords in list")
 
+    # guesses passwords using combinations of passwords in the file and punctuation characters
     while still_searching:
         if ("X" == punctuation[punc_count]):
             # If we're at the end of the string and found the 'X', leave it out
             ourguess_pass = words[word1count] + words[word2count]
         else:
             ourguess_pass = words[word1count] + punctuation[punc_count] + words[word2count]
-        # Try it the way they are in the word list
+        # try passwords as they are in the file
         if (check_userpass(which_password, ourguess_pass)):
             print ("Success! Password "+str(which_password)+" = " + ourguess_pass)
             still_searching = False   # we can stop now - we found it!
             result = True
         tests = tests + 1
         totalguesses = totalguesses + 1
-        # Now let's try it with the first letter of the first word capitalized
+        # capitalize the first letter of the first word
         if still_searching:
             ourguess_pass = Cap(words[word1count]) + punctuation[punc_count] + words[word2count]
             if (check_userpass(which_password, ourguess_pass)):
@@ -330,7 +331,7 @@ def search_method_4(file_name):
                 result = True
             tests = tests + 1
             totalguesses = totalguesses + 1
-        # Now let's try it with the first letter of the second word capitalized
+        # capitalize the first letter of the second word
         if still_searching:
             ourguess_pass = words[word1count] + punctuation[punc_count] + Cap(words[word2count])
             if (check_userpass(which_password, ourguess_pass)):
@@ -339,7 +340,7 @@ def search_method_4(file_name):
                 result = True
             tests = tests + 1
             totalguesses = totalguesses + 1
-        # Now let's try it with the both words capitalized
+        # capitalize the first letter of both words
         if still_searching:
             ourguess_pass = Cap(words[word1count]) + punctuation[punc_count] + Cap(words[word2count])
             if (check_userpass(which_password, ourguess_pass)):
@@ -359,6 +360,7 @@ def search_method_4(file_name):
                 if (word2count >= number_of_words):
                     still_searching = False
 
+    # return guess statistics
     seconds = time.time()-starttime
     report_search_time(tests, seconds)
     return result
@@ -378,7 +380,7 @@ def main(argv=None):
     password2="03694816"
     password3="mistress!maxwell"
     password4="phantomscorpion"
-    password5="a"
+    password5="armor"
     password6="frBSD173"
     password7="m0n2t3r2"
     password8="correcthorsebatterystaple"
@@ -388,12 +390,16 @@ def main(argv=None):
 # guess passwords #
 ###################
 
-    # start guessing
+    # prompt user to select password to crack
     which_password = 1
     which_password = int(input("Password to Guess (0-9): "))
     overallstart = time.time()
     foundit = False
+
+    # inform user about the password being cracked.
+    print("")
     print("Guessing: Password "+str(which_password))
+
     #  1st - guess common passwords
     if not foundit:
         foundit = search_method_3("passwords.txt")
