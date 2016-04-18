@@ -88,6 +88,7 @@ ___
 
 '''
 
+3. Save your changes!
 
 #### Operation:
 1. After executing the script, it will prompt you: 
@@ -96,7 +97,7 @@ ___
 
     <strong>Password to Decrypt (0-9):</strong>
 
-2. 
+2. Select the number that corresponds to the password you want to crack.
 
 ___
 
