@@ -88,7 +88,7 @@ ___
 
 '''
 
-3. Save your changes!
+REMEMBER TO SAVE YOUR CHANGES!
 
 #### Operation:
 1. After executing the script, it will prompt you: 
