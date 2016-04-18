@@ -118,7 +118,7 @@ def report_search_time(tests, seconds):
 ##################
 
 # METHOD 1 -
-# Guess using numbers. (up to 7 digits)
+# Guess using numbers. (up to 8 digits)
 def search_method_1(num_digits):
     global totalguesses
     result = False
@@ -127,7 +127,10 @@ def search_method_1(num_digits):
     tests = 0
     still_searching = True
     print("")
-    print("Method 1 - "+str(num_digits)+" digit numbers.")
+    if num_digits == 1:
+      print("Method 1 -- "+str(num_digits)+" digit")
+    else:
+      print("Method 1 -- "+str(num_digits)+" digits")
     while still_searching and a<(10**num_digits):
         ourguess = leading_zeroes(a,num_digits)
         tests = tests + 1
@@ -151,7 +154,7 @@ def search_method_2(num_pass_wheels):
     tests = 0
     still_searching = True
     print("")
-    print("Method 2 - "+str(num_pass_wheels)+" character limit.")
+    print("Method 2 -- "+str(num_pass_wheels)+" characters")
     wheel = " ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
     # alert user if more than 25 characters are reached
     if (num_pass_wheels > 25):
@@ -227,7 +230,7 @@ def search_method_3(file_name):
     # We need to know how many there are
     number_of_words = len(words)
     print("")
-    print("Method 3 - "+str(number_of_words)+" passwords in list")
+    print("Method 3 -- "+str(number_of_words)+" passwords in list")
     
     ## Depending on the file system, there may be extra characters before
     ## or after the words. 
@@ -299,7 +302,7 @@ def search_method_4(file_name):
 
     number_of_puncs = len(punctuation)
     print("")
-    print("Method 4 - "+str(number_of_puncs)+" punctuation characters | "+str(number_of_words)+" passwords in list")
+    print("Method 4 -- "+str(number_of_puncs)+" punctuation characters | "+str(number_of_words)+" passwords in list")
 
     while still_searching:
         if ("X" == punctuation[punc_count]):
@@ -414,7 +417,10 @@ def main(argv=None):
     #  9th - guess 7 digit numbers
     if not foundit:
         foundit = search_method_1(7)
-    # 10th - guess up to 25 character combinations
+	# 10th - guess 8 digit numbers
+    if not foundit:
+        foundit = search_method_1(8)
+    # 11th - guess up to 25 character combinations   
     if not foundit:
         foundit = search_method_2(25)
     seconds = time.time()-overallstart
