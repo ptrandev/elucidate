@@ -64,14 +64,23 @@ ___
 
     # set the passwords you want to guess here
     password0="123456"
+
     password1="albert"
+
     password2="03694816"
+
     password3="mistress!maxwell"
+
     password4="phantomscorpion"
+
     password5="armor"
+
     password6="frBSD173"
+
     password7="m0n2t3r2"
+
     password8="correcthorsebatterystaple"
+
     password9="Gkgmyf8jNYB2UbVf"
 
 
