@@ -35,7 +35,7 @@ password7 = ""
 password8 = ""
 password9 = ""
 
-# total number of guesses we had to make to find it
+# total number of guesses to crack the password
 totalguesses = 0
 
 
@@ -126,11 +126,13 @@ def search_method_1(num_digits):
     starttime = time.time()
     tests = 0
     still_searching = True
+	# inform user about number of digits
     print("")
     if num_digits == 1:
       print("Method 1 -- "+str(num_digits)+" digit")
     else:
       print("Method 1 -- "+str(num_digits)+" digits")
+	# guess up to 8 digit numbers
     while still_searching and a<(10**num_digits):
         ourguess = leading_zeroes(a,num_digits)
         tests = tests + 1
@@ -141,6 +143,7 @@ def search_method_1(num_digits):
             result = True
         a=a+1
 
+	# return guess statistics
     seconds = time.time()-starttime
     report_search_time(tests, seconds)
     return result
@@ -153,16 +156,14 @@ def search_method_2(num_pass_wheels):
     starttime = time.time()
     tests = 0
     still_searching = True
+
+	# inform user about character limit
     print("")
-    print("Method 2 -- "+str(num_pass_wheels)+" characters")
-    wheel = " ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
-    # alert user if more than 25 characters are reached
-    if (num_pass_wheels > 25):
-        print("Unable to handle the request. No more than 25 characters for a password")
-        still_searching = False
+    print("Method 2 -- "+str(num_pass_wheels)+" character limit")
+
     # set all of the wheels to the first position
+    wheel = " ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
     pass_wheel_array=array('i',[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0])
-        
     while still_searching:
         ourguess_pass = ""
         for i in range(0,num_pass_wheels):  # once for each wheel
@@ -185,9 +186,12 @@ def search_method_2(num_pass_wheels):
                 if i == (num_pass_wheels-1):
                     still_searching = False
 
+	# return guess statistics
     seconds = time.time()-starttime
     report_search_time(tests, seconds)
     return result
+
+#####################################################################################
 
 # This function takes in numbers, rounds them to the nearest integer and puts
 # commas in to make it more easily read by humans
@@ -216,6 +220,7 @@ def Cap (s):
     s = s.upper()[0]+s[1:]
     return s
 
+####################################################################################
 
 # METHOD 3 -
 # Use dictionary of common passwords. Includes capitalization. (uses passwords.txt)
@@ -223,11 +228,11 @@ def search_method_3(file_name):
     global totalguesses
     result = False
     
-    # Start by reading the list of words into a Python list
+    # access the passwords.txt file
     f = open(file_name)
     words = f.readlines()
     f.close
-    # We need to know how many there are
+    # inform user about amount of passwords in file
     number_of_words = len(words)
     print("")
     print("Method 3 -- "+str(number_of_words)+" passwords in list")
@@ -237,25 +242,23 @@ def search_method_3(file_name):
     for i in range(0, number_of_words):
         words[i] = cleanup(words[i])
 
-    # Let's try each one as the password and see what happens
+    # guesses using the passwords in the file
     starttime = time.time()
     tests = 0
     still_searching = True
     word1count = 0           # Which word we'll try next
-
     while still_searching:
         ourguess_pass = words[word1count]
-        # Try it the way it is in the word list
+        # guess each password in the file as is
         if (check_userpass(which_password, ourguess_pass)):
             print ("Success! Password "+str(which_password)+" = " + ourguess_pass)
             still_searching = False   # we can stop now - we found it!
             result = True
         tests = tests + 1
         totalguesses = totalguesses + 1
-        # Now let's try it with the first letter capitalized
+        # guess each password in the file with the first character capitalized
         if still_searching:
             ourguess_pass = Cap(ourguess_pass)
-            #print("Guessing: "+ourguess_pass)
             if (check_userpass(which_password, ourguess_pass)):
                 print ("Success! Password "+str(which_password)+" = " + ourguess_pass)
                 still_searching = False   # we can stop now - we found it!
@@ -267,6 +270,7 @@ def search_method_3(file_name):
         if (word1count >=  number_of_words):
             still_searching = False
 
+	# returns guess statistics
     seconds = time.time()-starttime
     report_search_time(tests, seconds)
     return result
@@ -277,11 +281,11 @@ def search_method_4(file_name):
     global totalguesses
     result = False
     
-    # Start by reading the list of words into a Python list
+    # access the passwords.txt file
     f = open(file_name)
     words = f.readlines()
     f.close
-    # We need to know how many there are
+    # get number of passwords in list
     number_of_words = len(words)
     
     ## Depending on the file system, there may be extra characters before
@@ -374,7 +378,7 @@ def main(argv=None):
     password2="03694816"
     password3="mistress!maxwell"
     password4="phantomscorpion"
-    password5="armor"
+    password5="a"
     password6="frBSD173"
     password7="m0n2t3r2"
     password8="correcthorsebatterystaple"
@@ -391,35 +395,35 @@ def main(argv=None):
     foundit = False
     print("Guessing: Password "+str(which_password))
     #  1st - guess common passwords
-    if not foundit:
-        foundit = search_method_3("passwords.txt")
+#    if not foundit:
+#        foundit = search_method_3("passwords.txt")
     #  2nd - guess combination of common passwords
-    if not foundit:
-        foundit = search_method_4("passwords.txt")
+#    if not foundit:
+#        foundit = search_method_4("passwords.txt")
     #  3rd - guess 1  digit numbers
-    if not foundit:
-        foundit = search_method_1(1)
+#    if not foundit:
+#        foundit = search_method_1(1)
     #  4th - guess 2 digit numbers
-    if not foundit:
-        foundit = search_method_1(2)
+#    if not foundit:
+#        foundit = search_method_1(2)
     #  5th - guess 3 digit numbers
-    if not foundit:
-        foundit = search_method_1(3)
+#    if not foundit:
+#        foundit = search_method_1(3)
     #  6th - guess 4 digit numbers
-    if not foundit:
-        foundit = search_method_1(4)
+#    if not foundit:
+#        foundit = search_method_1(4)
     #  7th - guess 5 digit numbers
-    if not foundit:
-        foundit = search_method_1(5) 
+#    if not foundit:
+#        foundit = search_method_1(5) 
     #  8th - guess 6 digit numbers
-    if not foundit:
-        foundit = search_method_1(6)
+#    if not foundit:
+#        foundit = search_method_1(6)
     #  9th - guess 7 digit numbers
-    if not foundit:
-        foundit = search_method_1(7)
+#    if not foundit:
+#        foundit = search_method_1(7)
 	# 10th - guess 8 digit numbers
-    if not foundit:
-        foundit = search_method_1(8)
+#    if not foundit:
+#       foundit = search_method_1(8)
     # 11th - guess up to 25 character combinations   
     if not foundit:
         foundit = search_method_2(25)
