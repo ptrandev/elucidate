@@ -62,7 +62,9 @@ ___
 
 2. Navigate to <em>line 371</em> and change <em>password0 - password9</em>:
 
+'''
     # set the passwords you want to guess here
+
     password0="123456"
 
     password1="albert"
@@ -82,6 +84,7 @@ ___
     password8="correcthorsebatterystaple"
 
     password9="Gkgmyf8jNYB2UbVf"
+'''
 
 
 #### Operation:
