@@ -63,7 +63,6 @@ ___
 2. Navigate to <em>line 371</em> and change <em>password0 - password9</em>:
 
 ```
-
     # set the passwords you want to guess here
     password0="123456"
     password1="albert"
@@ -75,7 +74,6 @@ ___
     password7="m0n2t3r2"
     password8="correcthorsebatterystaple"
     password9="Gkgmyf8jNYB2UbVf"
-
 ```
 
 #### Operation:
@@ -92,7 +90,6 @@ ___
 3. The script will now run! Here is a sample of the script's output:
 
 ```
-
 Password to Guess (0-9): 3
 Guessing: Password 3
 
@@ -109,7 +106,6 @@ Seconds: 47 | Tests: 19,139,981 | Tests/Seconds: 409,128
 Total Seconds: 47 seconds
 Total Guesses: 19,140,851 guesses
 Guesses/Second: 409,119 guesses/second
-
 ```
 ___
 
