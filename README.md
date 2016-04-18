@@ -45,20 +45,20 @@ ___
 #### Obtaining and Executing:
 1. Open the terminal and type:
 
-    <strong>$ git clone https://github.com/DonutDeflector/elucidate.git</strong>
+    ```<strong>$ git clone https://github.com/DonutDeflector/elucidate.git</strong>```
 
 2. Naviate to the directory:
 
-    <strong>$ cd elucidate/elucidate/</strong>
+    ```<strong>$ cd elucidate/elucidate/</strong>```
 
 3. Execute the script:
 
-    <strong>$ python elucidate.py</strong>
+    ```<strong>$ python elucidate.py</strong>```
 
 #### Edit Passwords to Crack:
 1. Open the <em>elucidate.py</em> file in your favorite text editor:
 
-	<strong>$ nvim elucidate.py</strong>
+	```<strong>$ nvim elucidate.py</strong>```
 
 2. Navigate to <em>line 371</em> and change <em>password0 - password9</em>:
 
@@ -79,13 +79,13 @@ ___
 #### Operation:
 1. After executing the script, it will prompt you: 
 
-    <strong>- Elucidate: Python Password Cracker -</strong>
+    ```<strong>- Elucidate: Python Password Cracker -</strong>
 
-    <strong>Password to Decrypt (0-9):</strong>
+    <strong>Password to Decrypt (0-9):</strong>```
 
 2. Select the number that corresponds to the password you want to crack:
 
-	<strong>Password to Decrypt (0-9):</strong> 3
+	```<strong>Password to Decrypt (0-9):</strong> 3```
 
 3. The script will now run! Here is a sample of the script's output:
 
