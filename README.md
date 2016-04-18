@@ -39,10 +39,10 @@ ___
 
 ## 2. Useage (For Linux)
 
-#### Package Requirements:
+##### Package Requirements:
 1. Python 2/3
 
-#### Obtaining and Executing:
+##### Obtaining and Executing:
 1. Open the terminal and type:
 
     <strong>$ git clone https://github.com/DonutDeflector/elucidate.git</strong>
@@ -55,7 +55,7 @@ ___
 
     <strong>$ python elucidate.py</strong>
 
-#### Edit Passwords to Crack:
+##### Edit Passwords to Crack:
 1. Open the <em>elucidate.py</em> file in your favorite text editor:
 
 	<strong>$ nvim elucidate.py</strong>
@@ -76,7 +76,7 @@ ___
     password9="Gkgmyf8jNYB2UbVf"
 ```
 
-#### Operation:
+##### Operation:
 1. After executing the script, it will prompt you: 
 
     <strong>- Elucidate: Python Password Cracker -</strong>
