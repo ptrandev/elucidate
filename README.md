@@ -55,14 +55,34 @@ ___
 
     <strong>$ python elucidate.py</strong>
 
+#### Edit Passwords to Crack:
+1. Open the <em>elucidate.py</em> file in your favorite text editor:
+
+	<strong>$ nvim elucidate.py</strong>
+
+2. Navigate to <em>line 371</em> and change <em>password0 - password9</em>:
+
+    # set the passwords you want to guess here
+    password0="123456"
+    password1="albert"
+    password2="03694816"
+    password3="mistress!maxwell"
+    password4="phantomscorpion"
+    password5="armor"
+    password6="frBSD173"
+    password7="m0n2t3r2"
+    password8="correcthorsebatterystaple"
+    password9="Gkgmyf8jNYB2UbVf"
+
+
 #### Operation:
 1. After executing the script, it will prompt you: 
 
-    <strong>- Elucidate: Python Password Hasher -</strong>
+    <strong>- Elucidate: Python Password Cracker -</strong>
 
-    <strong>Password to Decrypt: (0-6) </strong>
+    <strong>Password to Decrypt (0-9):</strong>
 
-
+2. 
 
 ___
 
