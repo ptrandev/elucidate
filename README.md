@@ -79,9 +79,11 @@ ___
 #### Operation:
 1. After executing the script, it will prompt you: 
 
-    ```- Elucidate: Python Password Cracker -
+```
+	- Elucidate: Python Password Cracker -
 
-    <strong>Password to Decrypt (0-9):</strong>```
+    Password to Decrypt (0-9):
+```
 
 2. Select the number that corresponds to the password you want to crack:
 
