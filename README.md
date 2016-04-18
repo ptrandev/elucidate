@@ -104,17 +104,26 @@ ___
 '''
 
 Password to Guess (0-9): 3
+
 Guessing: Password 3
 
+
 Method 3 -- 435 passwords in list
+
 Seconds: 0.0 | Tests: 870 | Tests/Seconds: 599,679
 
+
 Method 4 -- 26 punctuation characters | 435 passwords in list
+
 Success! Password 3 = mistress!maxwell
+
 Seconds: 47 | Tests: 19,139,981 | Tests/Seconds: 409,128
 
+
 Total Seconds: 47 seconds
+
 Total Guesses: 19,140,851 guesses
+
 Guesses/Second: 409,119 guesses/second
 
 '''
