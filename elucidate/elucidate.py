@@ -306,7 +306,7 @@ def search_method_4(file_name):
     # inform user about the amount of punctuation characters and passwords in the file
     number_of_puncs = len(punctuation)
     print("")
-    print("Method 4 -- "+str(number_of_puncs)+" punctuation characters | "+str(number_of_words)+" passwords in list")
+    print("Method 4 -- "+str(number_of_puncs)+" punctuation characters and "+str(number_of_words)+" passwords in list")
 
     # guesses passwords using combinations of passwords in the file and punctuation characters
     while still_searching:
@@ -406,7 +406,7 @@ def main(argv=None):
     #  2nd - guess combination of common passwords
     if not foundit:
         foundit = search_method_4("passwords.txt")
-    #  3rd - guess 1  digit numbers
+    #  3rd - guess 1 digit numbers
     if not foundit:
         foundit = search_method_1(1)
     #  4th - guess 2 digit numbers
