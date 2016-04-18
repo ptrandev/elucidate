@@ -395,35 +395,35 @@ def main(argv=None):
     foundit = False
     print("Guessing: Password "+str(which_password))
     #  1st - guess common passwords
-#    if not foundit:
-#        foundit = search_method_3("passwords.txt")
+    if not foundit:
+        foundit = search_method_3("passwords.txt")
     #  2nd - guess combination of common passwords
-#    if not foundit:
-#        foundit = search_method_4("passwords.txt")
+    if not foundit:
+        foundit = search_method_4("passwords.txt")
     #  3rd - guess 1  digit numbers
-#    if not foundit:
-#        foundit = search_method_1(1)
+    if not foundit:
+        foundit = search_method_1(1)
     #  4th - guess 2 digit numbers
-#    if not foundit:
-#        foundit = search_method_1(2)
+    if not foundit:
+        foundit = search_method_1(2)
     #  5th - guess 3 digit numbers
-#    if not foundit:
-#        foundit = search_method_1(3)
+    if not foundit:
+        foundit = search_method_1(3)
     #  6th - guess 4 digit numbers
-#    if not foundit:
-#        foundit = search_method_1(4)
+    if not foundit:
+        foundit = search_method_1(4)
     #  7th - guess 5 digit numbers
-#    if not foundit:
-#        foundit = search_method_1(5) 
+    if not foundit:
+        foundit = search_method_1(5) 
     #  8th - guess 6 digit numbers
-#    if not foundit:
-#        foundit = search_method_1(6)
+    if not foundit:
+        foundit = search_method_1(6)
     #  9th - guess 7 digit numbers
-#    if not foundit:
-#        foundit = search_method_1(7)
+    if not foundit:
+        foundit = search_method_1(7)
 	# 10th - guess 8 digit numbers
-#    if not foundit:
-#       foundit = search_method_1(8)
+    if not foundit:
+       foundit = search_method_1(8)
     # 11th - guess up to 25 character combinations   
     if not foundit:
         foundit = search_method_2(25)
