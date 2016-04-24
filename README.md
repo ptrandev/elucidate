@@ -3,9 +3,8 @@ A Python script that uses basic methods to crack passwords.
 
 Based off a script created by [Science Buddies](http://www.sciencebuddies.org/Files/5549/17/crack2.py).
 
-This script contains cleaner, improved code and commenting.
+This script contains cleaner, improved code and commenting as well as additional functionality.
 
-You could call me a script kiddie. I may suck at Python but I'm sure everyone except Guido did so at one point.
 ___
 
 ## Table of Contents -
@@ -113,5 +112,14 @@ ___
 
 ## 3. Modification and Redistribution
 
-Do as you please with the script the only restriction is you must give credit to both [Science Buddies](http://www.sciencebuddies.org/Files/5549/17/crack2.py) and myself.
+Do as you please with the script the only restriction is you must give credit to both [Science Buddies](http://www.sciencebuddies.org/science-fair-projects/project_ideas/CompSci_p046.shtml#procedure) and myself. The requirement is noted as so on the linked page:
+
+```
+A Note About Plagiarism: The programming examples below are available for you to download and run on your own computer and even to use, if your teacher agrees, for your science project. When things are open-source like this, it can be confusing as to what is plagiarism and what is not, so Science Buddies has created this clear set of definitions to guide you. If you:
+   - Use the programs as they are and give Science Buddies credit— this is not plagiarism.
+   - Modify the programs and say that they were adapted from Science Buddies— this is not plagiarism.
+   - Write your own programs from scratch— this is not plagiarism.
+   - If you use the programs as they are (or modify them) without mentioning Science Buddies— this is plagiarism.
+```
+
 
