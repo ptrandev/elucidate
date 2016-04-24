@@ -113,5 +113,5 @@ ___
 
 ## 3. Modification and Redistribution
 
-
+Do as you please with the script the only restriction is you must give credit to both [Science Buddies](http://www.sciencebuddies.org/Files/5549/17/crack2.py) and myself.
 
