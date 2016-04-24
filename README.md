@@ -31,7 +31,7 @@ Elucidate uses 4 methods to crack passwords:
 
 #### 1. Dictionary of Common Passwords
   
-Elucidate will use the "password.txt" file to guess the password. It contains only safe-for-work (and school) common passwords from a book called *Perfect Passwords: Selection, Protection, Authenication* by Mark Burnett (__ISBN 978-1597490412__). 
+Elucidate will use the <em>"password.txt"</em> file to guess the password. It contains only safe-for-work (and school) common passwords from a book called *Perfect Passwords: Selection, Protection, Authenication* by Mark Burnett (<em>ISBN 978-1597490412</em>). 
 
 #### 2. Dictionary of Common Passwords (Plus Plus)
 
@@ -68,7 +68,7 @@ ___
 #### Edit Passwords to Crack:
 1. Open the <em>elucidate.py</em> file in your favorite text editor:
 
-	```$ nvim elucidate.py```
+    ```$ nvim elucidate.py```
 
 2. Navigate to <em>line 371</em> and change <em>password0 - password9</em>:
 
@@ -97,7 +97,7 @@ ___
 
 2. Select the number that corresponds to the password you want to crack:
 
-	```Password to Decrypt (0-9): 3```
+    ```Password to Decrypt (0-9): 3```
 
 3. The script will now run! Here is a sample of the script's output:
 
