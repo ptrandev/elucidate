@@ -31,7 +31,7 @@ Elucidate uses 4 methods to crack passwords:
 
 #### 1. Dictionary of Common Passwords
   
-Elucidate will use the <em>"password.txt"</em> file to guess the password. It contains only safe-for-work (and school) common passwords from a book called *Perfect Passwords: Selection, Protection, Authenication* by Mark Burnett (<em>ISBN 978-1597490412</em>). 
+Elucidate will use the *"password.txt"* file to guess the password. It contains only safe-for-work (and school) common passwords from a book called *Perfect Passwords: Selection, Protection, Authenication* by Mark Burnett (___ISBN 978-1597490412___). 
 
 #### 2. Dictionary of Common Passwords (Plus Plus)
 
@@ -70,7 +70,7 @@ ___
 
     ```$ nvim elucidate.py```
 
-2. Navigate to <em>line 371</em> and change <em>password0 - password9</em>:
+2. Navigate to *line 371* and change *password0 - password9*:
 
 ```
     # set the passwords you want to guess here
