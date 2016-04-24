@@ -8,13 +8,24 @@ This script contains cleaner, improved code and commenting as well as additional
 ___
 
 ## Table of Contents -
-1. Methods of Cracking Passwords
-2. Useage
-3. Modification and Redistribution
+1. Modifications Made to the Original Script
+2. Methods of Cracking Passwords
+3. Usage
+4. Modification and Redistribution
 
 ___
 
-## 1. Methods of Cracking Passwords
+## 1. Modifications Made to the Original Script
+ 1. Clearer commenting
+ 2. More readable output to the terminal
+ 3. Removed Need for password variables in MD5 Hashes
+ 3. Support for up to 10 passwords (from original 7)
+ 4. Support for up to 8 digit numbers (from original 7)
+ 5. Support for up to 25 character passwords (from original 8)
+
+___
+
+## 2. Methods of Cracking Passwords
 
 Elucidate uses 4 methods to crack passwords:
 
@@ -36,7 +47,7 @@ Elucidate will combine all characters and punctiation sequentially. It will firs
 
 ___
 
-## 2. Useage (For Linux)
+## 3. Useage (For Linux)
 
 #### Package Requirements:
 1. Python 2/3
@@ -110,12 +121,17 @@ Guesses/Second: 409,119 guesses/second
 ```
 ___
 
-## 3. Modification and Redistribution
+## 4. Modification and Redistribution
 
 Do as you please with the script the only restriction is you must give credit to both [Science Buddies](http://www.sciencebuddies.org/science-fair-projects/project_ideas/CompSci_p046.shtml#procedure) and myself. The requirement is noted as so on the linked page:
 
 ```
-A Note About Plagiarism: The programming examples below are available for you to download and run on your own computer and even to use, if your teacher agrees, for your science project. When things are open-source like this, it can be confusing as to what is plagiarism and what is not, so Science Buddies has created this clear set of definitions to guide you. If you:
+A Note About Plagiarism: The programming examples below are available for you to 
+download and run on your own computer and even to use, if your teacher agrees, for 
+your science project. When things are open-source like this, it can be confusing as 
+to what is plagiarism and what is not, so Science Buddies has created this clear set
+of definitions to guide you. If you:
+
    - Use the programs as they are and give Science Buddies credit— this is not plagiarism.
    - Modify the programs and say that they were adapted from Science Buddies— this is not plagiarism.
    - Write your own programs from scratch— this is not plagiarism.
