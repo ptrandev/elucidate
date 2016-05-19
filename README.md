@@ -47,7 +47,7 @@ Elucidate will combine all characters and punctiation sequentially. It will firs
 
 ___
 
-## 3. Useage (For Linux)
+## 3. Usage (For Linux)
 
 #### Package Requirements:
 1. Python 2.7
