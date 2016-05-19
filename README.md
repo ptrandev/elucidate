@@ -18,7 +18,7 @@ ___
 ## 1. Modifications Made to the Original Script
  1. Clearer commenting
  2. More readable output to the terminal
- 3. Removed Need for password variables in MD5 Hashes
+ 3. Removed need for password variables in MD5 Hashes
  3. Support for up to 10 passwords (from original 7)
  4. Support for up to 8 digit passwords (from original 7)
  5. Support for up to 25 character passwords (from original 8)
