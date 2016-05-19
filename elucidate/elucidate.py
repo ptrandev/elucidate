@@ -8,7 +8,7 @@
 # See README.md for more information.
 # Availiable on Github: https://github.com/DonutDeflector/elucidate
 
-# Go to line 368 to set the passwords you want to crack.
+# Go to line 377 to set the passwords you want to crack.
 
 ######################################################################################
 
