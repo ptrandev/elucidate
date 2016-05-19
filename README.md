@@ -1,5 +1,7 @@
 # Elucidate
-A Python script that uses basic methods to crack passwords.
+A Python script that uses basic methods to crack passwords. 
+
+NOTE: THIS SCRIPT IS NON MALICIOUS. PASSWORDS ARE SPECIFIED AS VARIABLES INSIDE THE SCRIPT.
 
 Based off a script created by [Science Buddies](http://www.sciencebuddies.org/Files/5549/17/crack2.py).
 
