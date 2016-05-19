@@ -20,7 +20,7 @@ ___
  2. More readable output to the terminal
  3. Removed Need for password variables in MD5 Hashes
  3. Support for up to 10 passwords (from original 7)
- 4. Support for up to 8 digit numbers (from original 7)
+ 4. Support for up to 8 digit passwords (from original 7)
  5. Support for up to 25 character passwords (from original 8)
 
 ___
@@ -39,18 +39,19 @@ This builds upon the the first method. It combines two common passwords together
 
 #### 3. Numbers Only
   
-The script will guess the password only using numbers. It will first guess 1 number, then 2 number combinations, then 3 number combinations, etc. It will guess up combinations up to 8 characters.
+The script will guess the password only using numbers. It will first guess 1 number, then 2 number combinations, then 3 number combinations, etc. It will guess up to 8 digit numbers.
 
 #### 4. Combination of Characters
   
-Elucidate will combine all characters and punctiation sequentially. It will first guess 1 character, then 2 character combinations , then 3 character combinations, etc. It will guess combinations up to 8 characters.
+Elucidate will combine all characters and punctiation sequentially. It will first guess 1 character, then 2 character combinations , then 3 character combinations, etc. It will guess combinations up to 25 characters.
 
 ___
 
 ## 3. Useage (For Linux)
 
 #### Package Requirements:
-1. Python 2/3
+1. Python 2.7
+2. git (optional)
 
 #### Obtaining and Executing:
 1. Open the terminal and type:
@@ -70,7 +71,7 @@ ___
 
     ```$ nvim elucidate.py```
 
-2. Navigate to *line 371* and change *password0 - password9*:
+2. Navigate to *line 377* and change *password0 - password9*:
 
 ```
     # set the passwords you want to guess here
