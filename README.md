@@ -1,5 +1,5 @@
 # Elucidate
-A Python script that uses basic methods to crack passwords. 
+A nonmalicious Python script that uses basic methods to crack passwords. 
 
 **NOTE: THIS SCRIPT IS NON MALICIOUS. ELUCIDATE ONLY CRACKS PASSWORDS THAT ARE SPECIFIED WITHIN THE SCRIPT AS VARIABLES.**
 
