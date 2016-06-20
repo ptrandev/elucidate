@@ -60,7 +60,7 @@ ___
 
     ```$ git clone https://github.com/DonutDeflector/elucidate.git```
 
-2. Naviate to the directory:
+2. Navigate to the directory:
 
     ```$ cd elucidate/elucidate/```
 
